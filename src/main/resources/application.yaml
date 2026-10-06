@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: mstep-integration
+
+
+
+  datasource:
+    url: jdbc:postgresql://localhost:5434/migration_test_db_27022026
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        default_schema: official
+
+    hibernate:
+      ddl-auto: none
+
+  sql:
+    init:
+      mode: always
+
+
+server:
+  port: 8084
